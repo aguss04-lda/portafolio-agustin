@@ -1,0 +1,370 @@
+/* ===== RESET Y VARIABLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #2563eb;
+    --color-secundario: #1e40af;
+    --color-oscuro: #1f2937;
+    --color-claro: #f9fafb;
+    --color-gris: #6b7280;
+    --transicion: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-oscuro);
+    scroll-behavior: smooth;
+}
+
+/* ===== NAVEGACIÓN ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-oscuro);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--color-primario);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-oscuro);
+    font-weight: 500;
+    transition: var(--transicion);
+}
+
+.nav-menu a:hover {
+    color: var(--color-primario);
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-oscuro);
+}
+
+.saludo {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: var(--color-gris);
+    margin-bottom: 1rem;
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    color: var(--color-gris);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicion);
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--color-primario);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primario);
+    color: white;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background: var(--color-primario);
+    color: white;
+}
+
+/* ===== SECCIONES ===== */
+.seccion {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-gris {
+    background: var(--color-claro);
+    max-width: 100%;
+}
+
+.titulo-seccion {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-oscuro);
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--color-primario);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* ===== SOBRE MÍ ===== */
+.sobre-mi-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--color-gris);
+}
+
+.sobre-mi-contenido p {
+    margin-bottom: 1rem;
+}
+
+/* ===== HABILIDADES ===== */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.habilidad-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.barra {
+    background: #e5e7eb;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+    border-radius: 6px;
+    transition: width 1s ease;
+}
+
+/* ===== PROYECTOS ===== */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.proyecto-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transicion);
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto-imagen {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.proyecto-card h3 {
+    margin-bottom: 1rem;
+}
+
+.proyecto-card p {
+    color: var(--color-gris);
+    margin-bottom: 1rem;
+}
+
+.proyecto-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.proyecto-tags span {
+    background: #e0f2fe;
+    color: var(--color-secundario);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ===== CONTACTO ===== */
+.contacto-contenido {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto-info a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicion);
+}
+
+.contacto-info a:hover {
+    color: var(--color-secundario);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--color-oscuro);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ===== SUBTÍTULOS DE HABILIDADES ===== */
+.subtitulo-habilidades {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-primario);
+    margin: 2rem 0 1.5rem;
+    font-weight: 600;
+}
+
+/* ===== HABILIDADES BLANDAS (BADGES) ===== */
+.habilidades-blandas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    transition: var(--transicion);
+}
+
+.badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== ENLACE DE WHATSAPP CON ESTILO PROPIO ===== */
+.contacto-info a[href*="wa.me"] {
+    color: #25D366;
+    font-weight: 600;
+}
+
+.contacto-info a[href*="wa.me"]:hover {
+    color: #128C7E;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+}
