@@ -2,15 +2,15 @@
 
 Sitio web personal desarrollado para mostrar mis habilidades, proyectos y experiencia como estudiante de Ingeniería Civil Informática en la Universidad Andrés Bello.
 
-## 🚀 Demo
+## Demo
 [Ver portafolio en vivo](https://aguss04-lda.github.io/portafolio-agustin)
 
-## 🛠️ Tecnologías
+## Tecnologías
 - HTML5
 - CSS3
 - JavaScript
 
-## 📦 Estructura del proyecto
+## Estructura del proyecto
 portafolio-agustin/
 ├── index.html
 ├── css/
@@ -19,7 +19,7 @@ portafolio-agustin/
 │ └── script.js
 └── README.md
 
-## 👤 Autor
+## Autor
 **Agustín Arrascaeta Cuevas**  
 Estudiante de Ingeniería Civil Informática - Universidad Andrés Bello  
 📧 agustinn.1505@gmail.com  
